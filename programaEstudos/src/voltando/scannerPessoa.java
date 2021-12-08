@@ -1,6 +1,6 @@
 package voltando;
 
-import java.util.Formatter;
+// import java.util.Formatter;
 import java.util.Scanner;
 
 public class scannerPessoa 
@@ -9,9 +9,9 @@ public class scannerPessoa
 	public static void main(String[] args) 
 	{
  		String nome, sobreNome, dataNascimento, altura;
-		Formatter formatador = new Formatter();
 		Scanner entrada = new Scanner(System.in);
-		
+		// Formatter formatador = new Formatter();
+	
 		
 		System.out.println("> > Faça sua carteira digital agora < <");
 		
@@ -27,12 +27,15 @@ public class scannerPessoa
 		System.out.println("\n>Escreva sua altura: ");
 		altura = entrada.nextLine();
 		
-		System.out.println("\n> > > > > SUA CARTEIRA DIGITAL ESTÁ PRONTA PARA USO < < < < <\n");
+		nome = nome + " " + sobreNome;
+
+		System.out.println("\n> > > > > > > > > > > > > > > SUA CARTEIRA DIGITAL ESTÁ PRONTA PARA USO < < < < < < < < < < < < < < <\n");
 		
-		formatador.format("|%s %20s %20s|\n", "Nome:", "Data:", "Altura:");
-		formatador.format("|%s %s %20s %20s|", nome, sobreNome, dataNascimento, altura);
-		System.out.println(formatador);
-		
+		System.out.printf("%23s %30s %33s\n", "Nome:", "Data:", "Altura:");
+		System.out.printf("%25s %30s %30s", nome, dataNascimento, altura);
+		System.out.println();
+
+		System.out.println("\n> > > > > > > > > > > > > > > > > > > > > > > > > | < < < < < < < < < < < < < < < < < < < < < < < < <\n");		
 		entrada.close();
 	}
 }
